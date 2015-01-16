@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width initial-scale=1">
+
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+		<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+		<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+  <body>
+		<header>
+			<nav class="menu">
+				<a>home</a>
+				<a>about me</a>
+				<a>works</a>
+				<a>contacts</a>
+			</nav>
+		</header>
+		<div>
+			<section>{% include introduction.html %}</section>
+			<section>{% include aboutme.html %}</section>
+			<section>{% include works.html %}</section>
+			<section>{% include contact.html %}</section>
+		</div>
+   	<script src="js/vendor/jquery-2.1.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
