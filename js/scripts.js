@@ -37,10 +37,20 @@
            }; 
         }(i));
     }
-    console.log(section[0].offsetTop);
-	console.log(section[1].offsetTop);
-	console.log(section[2].offsetTop);
-	console.log(section[3].offsetTop);
+    
+    var app = angular.module("myApp", ["worksList"]);
+    
+    app.controller("worksController", function($scope, worksListService){
+        alert(worksListService.workList[0].name);
+    });
+    
+    
+    angular.bootstrap(document, ["myApp"]);
+    
+//    console.log(section[0].offsetTop);
+//	console.log(section[1].offsetTop);
+//	console.log(section[2].offsetTop);
+//	console.log(section[3].offsetTop);
 }());
 
 /*

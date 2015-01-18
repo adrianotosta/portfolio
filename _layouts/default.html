@@ -25,13 +25,15 @@
 				<a>contacts</a>
 			</nav>
 		</header>
-		<div>
+		<div ng-controller = "worksController">
 			<section>{% include introduction.html %}</section>
 			<section>{% include aboutme.html %}</section>
 			<section>{% include works.html %}</section>
 			<section>{% include contact.html %}</section>
 		</div>
    	<script src="js/vendor/jquery-2.1.1.min.js"></script>
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/worksService.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
