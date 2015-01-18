@@ -41,7 +41,7 @@
     var app = angular.module("myApp", ["worksList"]);
     
     app.config(function($interpolateProvider){
-        $interpolateProvider.startSymbol('[%').endSymbol('%]');
+        $interpolateProvider.startSymbol('[[').endSymbol(']]');
     });
     
     app.controller("worksController", function($scope, worksListService){
