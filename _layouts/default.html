@@ -25,10 +25,15 @@
 				<a>contacts</a>
 			</nav>
 		</header>
-		<div ng-controller = "worksController">
+		<div>
 			<section>{% include introduction.html %}</section>
 			<section>{% include aboutme.html %}</section>
-			<section>{% include works.html %}</section>
+			<section ng-controller="worksController">
+                <div ng-repeat="w in works">
+                    [% w.name %]
+                </div>
+			    {% include works.html %}
+			 </section>
 			<section>{% include contact.html %}</section>
 		</div>
    	<script src="js/vendor/jquery-2.1.1.min.js"></script>
