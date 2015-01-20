@@ -46,6 +46,10 @@
     
     app.controller("worksController", function($scope, worksListService){
         $scope.works = worksListService.workList;
+        
+        $scope.loadingDetails = function(id){
+            $scope.details = $scope.works[id];
+        }
     });
     
     

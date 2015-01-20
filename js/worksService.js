@@ -4,9 +4,12 @@ works.service("worksListService", function(){
     this.workList = [
         {
             "id": 0,
-            "name": "title 0",
+            "title": "title 0",
+            "client": "client 0",
             "description": "text 0",
-            "alt": "0"
+            "role": "role 0",
+            "alt": "0eee",
+            "image": "work_0"
         },
         {
             "id": 1,
