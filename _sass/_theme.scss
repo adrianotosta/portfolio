@@ -161,26 +161,6 @@ ul li{
 /////////////////////////////////////////////////////////////////////////////////////
 .worksList{
     @include row();
-    
-    & .worksList-thumb{
-        @include column(2);
-        & a{
-            border-radius: 999em;
-            box-shadow: 0px 0px 16px 5px rgba(69, 66, 66, 0.66);
-            display: block;
-            overflow: hidden;
-            position: relative;
-            
-            img{
-                border-radius: 9999em;
-                position: relative;
-                top: .25em;
-                width: 100%;
-            }
-            
-            &:before{
-                background-color: transparent;
-                border-radius: 9999em;
     & li{
         @include column(2);
 
