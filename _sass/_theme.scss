@@ -63,7 +63,8 @@ body{
 		& > section{
 			border: solid 1px red;
 			min-height: 100%;
-            padding-top:3em; 
+            padding-top:3em;
+            position: relative;
 		}
 	}
 }
@@ -160,6 +161,14 @@ ul li{
 /////////////////////////////////////////////////////////////////////////////////////
 ///*WORKS*/
 /////////////////////////////////////////////////////////////////////////////////////
+.workDetail{
+    background-color: rgba(0, 0, 0, 0.7);
+    border: solid 1px red;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
 .worksList{
     & li{
         @include column(2);
