@@ -133,15 +133,10 @@ ul li{
 /////////////////////////////////////////////////////////////////////////////////////
 ///*LISTS*/
 /////////////////////////////////////////////////////////////////////////////////////
-
-<<<<<<< HEAD
-.list{
-=======
 .list{ 
     & li{
         line-height: 3em;
     }
->>>>>>> loading_one_work
     &.list--noBullet{
         list-style: none;
     }
@@ -165,7 +160,6 @@ ul li{
 ///*WORKS*/
 /////////////////////////////////////////////////////////////////////////////////////
 .worksList{
-<<<<<<< HEAD
     @include row();
     
     & .worksList-thumb{
@@ -213,23 +207,14 @@ ul li{
                 -webkit-transition:background 1s, color 1s;
                      -moz-transition:background 1s, color 1s;		
             }
-<<<<<<< HEAD
-=======
-            
->>>>>>> loading_one_work
             &:hover:before{
                 background-color: rgba(0,0,0,0.7);
                 left: 0;
             }
             
             &:after{
-<<<<<<< HEAD
-                background: transparent url("../../images/zoom.png") no-repeat center center;
-                border-radius: 9999em;
-=======
                 background: transparent  url("../../images/zoom.png") no-repeat center center;
                 border-radius: 1000em;
->>>>>>> loading_one_work
                 content: "";
                 left: 8em;
                 position: absolute;
@@ -244,21 +229,9 @@ ul li{
             &:hover:after{
                 left: 0;
             }
-            
-<<<<<<< HEAD
-            
         }
-
-
-    }
-
-=======
-        }
-        
     } 
-    
 }
->>>>>>> loading_one_work
 //    & .worksList-thumb{
 //        border-radius: 999em;
 //        box-shadow: 0px 0px 16px 5px rgba(69, 66, 66, 0.66);
