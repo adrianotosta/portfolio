@@ -165,9 +165,25 @@ ul li{
     background-color: rgba(0, 0, 0, 0.7);
     border: solid 1px red;
     position: absolute;
-    top: 0;
+    top: 6em;
     width: 100%;
     z-index: 100;
+    
+    & .workDetail-hideButton{
+        @include column(1);
+        @include offset(11);
+    }
+    
+    & .workDetail-image{
+        @include column(6);
+        & > img{
+            width: 100%;
+        }
+    }
+    
+    & .workDetail-description{
+        @include column(6);
+    }
 }
 .worksList{
     & li{
