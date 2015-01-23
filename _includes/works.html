@@ -1,14 +1,19 @@
 <h1>what i did</h1>
-<div class="workDetail">
-    <div class="workDetail-image">
-        <img src="[['../images/works/work_' + details.id + '.jpg']]" alt="">       
+<div class="workDetail ng-hide">
+    <div class="row">
+        <a href="" class="workDetail-hideButton" ng-click="unloadingDetails()">close</a>
     </div>
-    <div class="workDetails-description">
-        <p>[[details.title]]</p>
-        <p>[[details.description]]</p>
-        <p>[[details.client]]</p>
-        <p>[[details.role]]</p>
-    </div>  
+    <div class="row">
+        <div class="workDetail-image">
+            <img src="[['../images/works/work_' + details.id + '.jpg']]" alt="">       
+        </div>
+        <div class="workDetails-description">
+            <p>[[details.title]]</p>
+            <p>[[details.description]]</p>
+            <p>[[details.client]]</p>
+            <p>[[details.role]]</p>
+        </div>  
+    </div>
 </div>
 <ul class="row worksList list list--noBullet list--noPadding">
     <li ng-repeat="work in works">

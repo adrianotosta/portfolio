@@ -49,10 +49,10 @@ $columns-width: ($total-width/$total-columns);
     width: 100%;
     @include clearfix();
     & > *:first-child{
-        margin-left: 0;
+        margin-left: 0!important;
     }
     & > *:last-child{
-        margin-right: 0;
+        margin-right: 0!important;
     }
 }
 ///////////////////////////////////////////////////////////////////////////////////

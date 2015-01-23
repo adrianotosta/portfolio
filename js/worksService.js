@@ -30,4 +30,9 @@ works.service("worksListService", function(){
             "thumbnail": "3"
         }
     ];
+    
+    this.showWorkDetail = function(){
+        var workDetail = document.getElementsByClassName("workDetail");
+        workDetail[0].classList.toggle("ng-hide");
+    };
 });
