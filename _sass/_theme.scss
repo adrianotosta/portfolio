@@ -61,7 +61,6 @@ body{
         //padding-top: 3em;
 		position: relative;
 		& > section{
-			border: solid 1px red;
 			min-height: 100%;
             padding-top:3em;
             position: relative;
@@ -162,10 +161,10 @@ ul li{
 /////////////////////////////////////////////////////////////////////////////////////
 .workDetail{
     background-color: rgba(0, 0, 0, 0.7);
-    border: solid 1px red;
     position: absolute;
-    top: 6em;
+    padding: 6em 1em 1em 1em;
     width: 100%;
+    top: 0;
     z-index: 100;
     
     & .workDetail-hideButton{
