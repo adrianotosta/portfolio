@@ -185,6 +185,13 @@ ul li{
     }
 }
 .worksList{
+    &.worksList--centered{
+          @include row-center(8);
+        
+        li{
+            @include column(3);
+        }
+    }
     & li{
         @include column(2);
 
