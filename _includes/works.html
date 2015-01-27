@@ -1,17 +1,17 @@
 <h1>what i did</h1>
 <div class="workDetail ng-hide animated">
     <div class="row">
-        <a href="" class="workDetail-hideButton" ng-click="unloadingDetails()">close</a>
+        <a href="" class="workDetail-hideButton fa fa-times fa-2x" ng-click="unloadingDetails()"></a>
     </div>
     <div class="row">
         <div class="workDetail-image">
             <img src="[['../images/works/work_' + details.id + '.jpg']]" alt="">       
         </div>
-        <div class="workDetails-description">
-            <p>[[details.title]]</p>
+        <div class="workDetail-description">
+            <h2>[[details.title]]</h2>
             <p>[[details.description]]</p>
-            <p>[[details.client]]</p>
-            <p>[[details.duty]]</p>
+            <p><strong>client: </strong>[[details.client]]</p>
+            <p><strong>role: </strong>[[details.duty]]</p>
         </div>  
     </div>
 </div>
