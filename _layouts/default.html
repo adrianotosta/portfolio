@@ -17,22 +17,22 @@
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
   <body>
-		<header>
-			<nav class="menu">
-				<a>home</a>
-				<a>about me</a>
-				<a>works</a>
-				<a>contacts</a>
-			</nav>
-		</header>
-		<div>
-			<section>{% include introduction.html %}</section>
-			<section>{% include aboutme.html %}</section>
-			<section ng-controller="worksController">
-			    {% include works.html %}
-			 </section>
-			<section>{% include contact.html %}</section>
-		</div>
+    <header>
+        <nav class="menu">
+            <a>home</a>
+            <a>about me</a>
+            <a>works</a>
+            <a>contacts</a>
+        </nav>
+    </header>
+    <div>
+        <section>{% include introduction.html %}</section>
+        <section>{% include aboutme.html %}</section>
+        <section ng-controller="worksController">
+            {% include works.html %}
+        </section>
+        <section>{% include contact.html %}</section>
+    </div>
    	<script src="js/vendor/jquery-2.1.1.min.js"></script>
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/worksService.js"></script>

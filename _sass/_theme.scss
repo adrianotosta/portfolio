@@ -23,6 +23,7 @@
 $color-dark: rgb(28,28,28);
 $color-light: rgb(255,255,255);
 $color-magenta: rgb(244,8,53);
+$color-green: #7ab800;
 /////////////////////////////////////////////////////////////////////////////////////
 ///*MIXINS*/
 /////////////////////////////////////////////////////////////////////////////////////
@@ -65,6 +66,18 @@ body{
             padding-top:3em;
             position: relative;
 		}
+        
+        & > section:nth-child(4){
+            position: relative;
+
+            & > footer{
+                background-color: $color-magenta;
+                bottom: 0;
+                height: 4em;    
+                position: absolute;
+                @include row();
+            }
+        }
 	}
 }
 a{
