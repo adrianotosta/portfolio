@@ -42,7 +42,7 @@ works.service("worksListService", function(){
             "picture": "works\/work_3.jpg",
             "status": "show"
         }
-            ,
+//            ,
 //        {
 //            "id": 4,
 //            "title": "website",
