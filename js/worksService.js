@@ -41,48 +41,48 @@ works.service("worksListService", function(){
             "thumbnail": "works\/mini_work_3.jpg",
             "picture": "works\/work_3.jpg",
             "status": "show"
+        },
+        {
+            "id": 4,
+            "title": "website",
+            "description": "This is a template for a automotive store",
+            "client": "",
+            "duty": "wireframe, layout",
+            "thumbnail": "works\/mini_work_4.jpg",
+            "picture": "works\/work_4.jpg",
+            "status": "show"
+        },
+        {
+            "id": 5,
+            "title": "website",
+            "description": "This is a template for software store",
+            "client": "",
+            "duty": "wireframe, layout",
+            "thumbnail": "works\/mini_work_5.jpg",
+            "picture": "works\/work_5.jpg",
+            "status": "show"
+        },
+        {
+            "id": 6,
+            "title": "website",
+            "description": "This template was created for a bride magazine. ",
+            "client": "",
+            "duty": "wierframe, layout",
+            "thumbnail": "works\/mini_work_6.jpg",
+            "picture": "works\/work_6.jpg",
+            "status": "show"
+        },
+        {
+            "id": 7,
+            "title": "website",
+            "description": "This website was created for a company which sells and rents equipaments for civil construction industry.",
+            "client": "Trajetto",
+            "duty": "wireframe, layout, html, css, jquery",
+            "thumbnail": "works\/mini_work_7.jpg",
+            "picture": "works\/work_7.jpg",
+            "status": "show"
         }
-            ,
-//        {
-//            "id": 4,
-//            "title": "website",
-//            "description": "This is a template for a automotive store",
-//            "client": "",
-//            "duty": "wireframe, layout",
-//            "thumbnail": "works\/mini_work_4.jpg",
-//            "picture": "works\/work_4.jpg",
-//            "status": "show"
-//        },
-//        {
-//            "id": 5,
-//            "title": "website",
-//            "description": "This is a template for software store",
-//            "client": "",
-//            "duty": "wireframe, layout",
-//            "thumbnail": "works\/mini_work_5.jpg",
-//            "picture": "works\/work_5.jpg",
-//            "status": "show"
-//        },
-//        {
-//            "id": 6,
-//            "title": "website",
-//            "description": "This template was created for a bride magazine. ",
-//            "client": "",
-//            "duty": "wierframe, layout",
-//            "thumbnail": "works\/mini_work_6.jpg",
-//            "picture": "works\/work_6.jpg",
-//            "status": "show"
-//        },
-//        {
-//            "id": 7,
-//            "title": "website",
-//            "description": "This website was created for a company which sells and rents equipaments for civil construction industry.",
-//            "client": "Trajetto",
-//            "duty": "wireframe, layout, html, css, jquery",
-//            "thumbnail": "works\/mini_work_7.jpg",
-//            "picture": "works\/work_7.jpg",
-//            "status": "show"
-//        },
+//            ,
 //        {
 //            "id": 8,
 //            "title": "brand",
