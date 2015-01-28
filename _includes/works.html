@@ -16,7 +16,7 @@
     </div>
 </div>
 <ul class="row worksList worksList--centered list list--noBullet list--noPadding">
-    <li ng-repeat="work in works">
+    <li class="worksList-item" ng-class="{'worksList-item--noMarginLeft': $index % 3 == 0}"ng-repeat="work in works">
         <a ng-click="loadingDetails([[work.id]])" href="" class="worksList-thumb">
             <img src="[['../images/works/mini_work_' + work.id + '.jpg']]" alt="">
         </a>

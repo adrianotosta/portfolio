@@ -210,7 +210,8 @@ ul li{
             @include column(3);
         }
     }
-    & li{
+    & .worksList-item{
+        padding-bottom: 3em;
         @include column(2);
 
         & a{
@@ -258,7 +259,10 @@ ul li{
             &:hover:after{
                 left: 0;
             }   
-        }  
+        }
+        &.worksList-item--noMarginLeft{
+            margin-left: 0;
+        }
     } 
 }
 /////////////////////////////////////////////////////////////////////////////////////
