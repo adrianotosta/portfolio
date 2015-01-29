@@ -81,8 +81,7 @@ works.service("worksListService", function(){
             "thumbnail": "works\/mini_work_7.jpg",
             "picture": "works\/work_7.jpg",
             "status": "show"
-        }
-//            ,
+        },
 //        {
 //            "id": 8,
 //            "title": "brand",
