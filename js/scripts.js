@@ -98,10 +98,10 @@
     for(i in listSkill){
         //fill
         skills.fillStyle = "#f40835";//listSkill[i].colors[1];
-        skills.fillRect(((i * 50) + (10 * i)), 250, 50, listSkill[i].rank);
+        skills.fillRect(((i * 50) + (10 * i)), 150, 50, listSkill[i].rank);
         //stroke
         skills.strokeStyle = "#fff";//listSkill[i].colors[0];
-        skills.strokeRect(((i * 50) + (10 * i)), 250, 50, -144);
+        skills.strokeRect(((i * 50) + (10 * i)), 150, 50, -144);
     }
 ///////////////////////////////////////////////////////////////////////////////////
 /*WORKS*/
