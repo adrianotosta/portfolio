@@ -45,62 +45,54 @@
     var listSkill = [
         {
             "name": "html 5",
-            "colors": ["#E44D26", "#F16529"],
-            "rank": -12
+            "rank": 40
         },
         {
             "name": "css3",
-            "colors": ["#93290d", "#29f167"],
-            "rank": -5
+            "rank": 60
         },
         {
             "name": "sass",
-            "colors": "",
-            "rank": 1
+            "rank": 30
         },
         {
             "name": "javascript",
-            "colors": "",
-            "rank": 1
+            "rank": 55
         },
         {
             "name": "jquery",
-            "colors": "",
-            "rank": 1
+            "rank": 80
         },
         {
             "name": "angular",
-            "colors": "",
-            "rank": 1
+            "rank": 30
         },
         {
             "name": "php",
-            "colors": "",
-            "rank": 1
+            "rank": 30
         },
         {
             "name": ".Net MVC 4",
-            "colors": "",
-            "rank": 1
+            "rank": 30
         },
         {
             "name": "photoshop",
-            "colors": "",
-            "rank": 1
+            "rank": 70
         },
         {
             "name": "illustrator",
-            "colors": "",
-            "rank": 1
+            "rank": 60
         }
     ];
-    
+    var percentage = function(rank){
+        return ((rank / 100) * 144) * -1;
+    }
     for(i in listSkill){
         //fill
-        skills.fillStyle = "#f40835";//listSkill[i].colors[1];
-        skills.fillRect(((i * 50) + (10 * i)), 150, 50, listSkill[i].rank);
+        skills.fillStyle = "#b6dd11";
+        skills.fillRect(((i * 50) + (10 * i)), 150, 50, percentage(listSkill[i].rank));
         //stroke
-        skills.strokeStyle = "#fff";//listSkill[i].colors[0];
+        skills.strokeStyle = "#b6dd11";
         skills.strokeRect(((i * 50) + (10 * i)), 150, 50, -144);
     }
 ///////////////////////////////////////////////////////////////////////////////////
