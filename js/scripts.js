@@ -68,20 +68,20 @@
             "rank": 30
         },
         {
-            "name": "php",
-            "rank": 30
-        },
-        {
-            "name": ".Net MVC 4",
-            "rank": 30
-        },
-        {
             "name": "photoshop",
             "rank": 70
         },
         {
             "name": "illustrator",
             "rank": 60
+        },
+        {
+            "name": "php",
+            "rank": 30
+        },
+        {
+            "name": ".Net",
+            "rank": 30
         }
     ];
     var percentage = function(rank){
@@ -94,6 +94,11 @@
         //stroke
         skills.strokeStyle = "#b6dd11";
         skills.strokeRect(((i * 50) + (10 * i)), 150, 50, -144);
+        //legend
+        skills.font      = "9pt Helvetica";
+        skills.textAlign = "center";
+        skills.fillStyle = "#fff";
+        skills.fillText(listSkill[i].name, ((i * 60) + 30), 180);   
     }
 ///////////////////////////////////////////////////////////////////////////////////
 /*WORKS*/
