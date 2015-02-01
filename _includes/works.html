@@ -5,7 +5,7 @@
     </div>
     <div class="row">
         <div class="workDetail-image">
-            <img src="[['../images/works/work_' + details.id + '.jpg']]" alt="">       
+            <img src="../images/works/[[details.picture]]" alt="">       
         </div>
         <div class="workDetail-description">
             <h2>[[details.title]]</h2>
@@ -18,7 +18,7 @@
 <ul class="row worksList worksList--centered list list--noBullet list--noPadding">
     <li class="worksList-item" ng-class="{'worksList-item--noMarginLeft': $index % 3 == 0}"ng-repeat="work in works">
         <a ng-click="loadingDetails([[work.id]])" href="" class="worksList-thumb">
-            <img src="[['../images/works/mini_work_' + work.id + '.jpg']]" alt="">
+           <img src="../images/works/[[work.thumbnail]]" alt="">
         </a>
     </li>
 </ul>
