@@ -74,7 +74,9 @@ body{
                 background-color: $color-magenta;
                 bottom: 0;
                 height: 4em;    
+                padding-top: 1em;
                 position: absolute;
+                text-align: center;
                 @include row();
             }
         }
