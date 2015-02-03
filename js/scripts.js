@@ -34,6 +34,12 @@
                            clearTimeout(scroll);
                        }
                    }
+                   if(section[index].offsetTop > 550){
+//                       setInterval(function(){
+                        section[index].classList.add("flipInY");
+//                       }, 250);
+                    
+                   }
                    console.log(body.scrollTop + "------" + section[index].offsetTop);
                }()); 
            }; 
