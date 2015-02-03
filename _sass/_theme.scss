@@ -51,7 +51,7 @@ body{
 	
 	& > header{
 		background: url("../../images/bgMenu.png") repeat-x bottom left;
-		padding:1em 0 2em 0;
+		padding:1em 0 1.5em 0;
 		position: fixed;
 		width: 100%;
 		z-index: 100000;
@@ -59,7 +59,6 @@ body{
 	
 	& > div:nth-child(2){
 		height: 100%;
-        //padding-top: 3em;
 		position: relative;
 		& > section{
 			min-height: 100%;
@@ -67,6 +66,20 @@ body{
             position: relative;
 		}
         
+        & > section:nth-child(1){
+            & > blockquote{
+                margin-top: 1.5em!important;
+                padding: 1em;
+                text-align: center;
+                @include typograph-gnuolane(5em);
+                @include row-center(10);
+                & > small{
+                    display: block;
+                    margin-top: 2.5em;
+                    font-size: 0.2em;
+                }
+            }
+        }
         & > section:nth-child(4){
             position: relative;
 
@@ -112,24 +125,28 @@ ul li{
 ///*NAV*/
 /////////////////////////////////////////////////////////////////////////////////////
 .menu{
-    & a{
-    	@include typograph-gnuolane(1.5em);
-        background-color: transparent;
-        border-radius: .25em;
-        color:$color-dark;
-        display: inline-block;
-        padding:.25em .5em;
-        text-decoration: none;
-        -webkit-transition:background 1s, color 1s;
-           -moz-transition:background 1s, color 1s;
+    & > ul{
+        @include row-center(4);
+        & > li{
+            display: inline-block;
+            & > a{
+                background-color: transparent;
+                border-radius: .25em;
+                color:$color-dark;
+                padding:.2em .5em;
+                text-decoration: none;
+                -webkit-transition:background 1s, color 1s;
+                   -moz-transition:background 1s, color 1s;
+                @include typograph-gnuolane(1.5em);
 
-        &:hover{
-            background-color: $color-magenta;
-            color: $color-light;
+                &:hover{
+                    background-color: $color-magenta;
+                    color: $color-light;
+                }
+            }
         }
     }
 }
-.menu--center{}
 /////////////////////////////////////////////////////////////////////////////////////
 ///*BUTTONS*/
 /////////////////////////////////////////////////////////////////////////////////////
