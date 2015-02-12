@@ -1,11 +1,31 @@
 (function(){
+  'use strict';  
+///////////////////////////////////////////////////////////////////////////////////
+/*VARIABLES*/
+///////////////////////////////////////////////////////////////////////////////////
+    var body      = document.body,
+        nav       = body.getElementsByClassName("menu")[0],
+        navButton = nav.getElementsByTagName("a");
+///////////////////////////////////////////////////////////////////////////////////
+/*REQUIRE CONFIG*/
+///////////////////////////////////////////////////////////////////////////////////
     require.config({
         baseUrl: "js",
         paths: {
             "jquery": "vendor/jquery-2.1.1.min"
         }
     });
-
-    require([], function(){
+///////////////////////////////////////////////////////////////////////////////////
+/*MENU*/
+///////////////////////////////////////////////////////////////////////////////////
+    require(["menu"], function(Menu){
+        var menu = new Menu();
+        for(var i = 0; i < navButton.length; i++){
+            (function(index){
+                navButton[index].onclick = function(){
+                    menu.scroll(index);
+                };
+            }(i));
+        }
     });
 }());
