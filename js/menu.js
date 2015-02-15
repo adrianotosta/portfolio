@@ -5,7 +5,6 @@ define(["jquery"], function($){
         
         this.scroll = function(index){
             body.animate({scrollTop: section.eq(index).offset().top}, 1000);
-            console.log(index);
         }
         
     };

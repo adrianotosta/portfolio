@@ -1,24 +1,19 @@
 <h1>what i did</h1>
-<div class="workDetail ng-hide animated">
-    <div class="row">
-        <a href="" class="workDetail-hideButton fa fa-times fa-2x" ng-click="unloadingDetails()"></a>
-    </div>
+<div class="workDetail animated">
+    <header class="row">
+        <a href="" class="workDetail-hideButton fa fa-times fa-2x"></a>
+    </header>
     <div class="row">
         <div class="workDetail-image">
-            <img src="../images/works/[[details.picture]]" alt="">       
+            <img src="" alt="">       
         </div>
         <div class="workDetail-description">
-            <h2>[[details.title]]</h2>
-            <p>[[details.description]]</p>
-            <p><strong>client: </strong>[[details.client]]</p>
-            <p><strong>role: </strong>[[details.duty]]</p>
+            <h2></h2>
+            <p></p>
+            <p><strong>client: </strong></p>
+            <p><strong>role: </strong></p>
         </div>  
     </div>
 </div>
 <ul class="row worksList worksList--centered list list--noBullet list--noPadding">
-    <li class="worksList-item" ng-class="{'worksList-item--noMarginLeft': $index % 3 == 0}"ng-repeat="work in works">
-        <a ng-click="loadingDetails([[work.id]])" href="" class="worksList-thumb">
-           <img src="../images/works/[[work.thumbnail]]" alt="">
-        </a>
-    </li>
 </ul>

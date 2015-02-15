@@ -196,6 +196,7 @@ ul li{
 /////////////////////////////////////////////////////////////////////////////////////
 .workDetail{
     background-color: rgba(0, 0, 0, 0.7);
+    display: none;
     position: absolute;
     padding: 6em 1em 1em 1em;
     width: 100%;
@@ -229,7 +230,7 @@ ul li{
           @include row-center(8);
         
         li{
-            @include column(3);
+            @include column(2.9);
         }
     }
     & .worksList-item{

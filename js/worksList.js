@@ -2,7 +2,7 @@ define([],function(){
     return [
         {
             "id": 0,
-            "title": "website",
+         -   "title": "website",
             "description": "This website was my first international project. It had been a web gallery of a Brazilian photographer who had lived in Barcelona.",
             "client": "Petala Os",
             "duty": "wireframe, html, css, jquery",
