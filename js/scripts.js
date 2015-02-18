@@ -35,7 +35,6 @@
     require(["works"], function(Works){
         var works = new Works(),
             li    = document.getElementsByClassName("worksList-item");
-
         
         works.showWorksList(works.loadWorksList(0,8));
         
@@ -46,5 +45,12 @@
                 });
             }(i));
         }        
+    });
+///////////////////////////////////////////////////////////////////////////////////
+/*GRAPH*/
+///////////////////////////////////////////////////////////////////////////////////
+    require(["chart"], function(Chart){
+        var graph = new Chart();
+        graph.createChart();
     });
 }());
