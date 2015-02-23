@@ -6,7 +6,7 @@ define([], function(){
         },
         {
             "name": "html 5",
-            "rank": 40
+            "rank": 50
         },
         {
             "name": "css/css3",

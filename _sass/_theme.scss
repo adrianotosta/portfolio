@@ -48,58 +48,9 @@ body{
 	background-image: url("../images/bg.jpg");
 	background-attachment: fixed;	
 	color: $color-light;
-	
-	& > header{
-		background: url("../../images/bgMenu.png") repeat-x bottom left;
-		padding:1em 0 1.5em 0;
-		position: fixed;
-		width: 100%;
-		z-index: 100000;
-	}
-	
-	& > div:nth-child(2){
-		height: 100%;
-		position: relative;
-		& > section{
-			min-height: 100%;
-            padding-top:3em;
-            position: relative;
-		}
-        
-        & > section:nth-child(1){
-            & > blockquote{
-                margin-top: 1.5em!important;
-                padding: 1em;
-                text-align: center;
-                @include typograph-gnuolane(5em);
-                @include row-center(10);
-                & > small{
-                    display: block;
-                    margin-top: 2.5em;
-                    font-size: 0.2em;
-                }
-            }
-        }
-        & > section:nth-child(2){
-//            opacity: 0;
-        }
-        & > section:nth-child(4){
-            position: relative;
-
-            & > footer{
-                background-color: $color-magenta;
-                bottom: 0;
-                height: 4em;    
-                padding-top: 1em;
-                position: absolute;
-                text-align: center;
-                @include row();
-            }
-        }
-	}
 }
 a{
-	cursor: pointer;
+    cursor: pointer;
 }
 h1{
 	@include typograph-gnuolane(4em);
@@ -107,16 +58,21 @@ h1{
 h2{
 	@include typograph-gnuolane(2em);
 }
-img[src="images/photo.png"]{
-    @include column(4);
-	& + div{
-		line-height: 1.5em;
-        @include column(6);
-        @include offset(2);
-	}
-}
 ul li{
 	line-height: 1.5em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+///*LIST*/
+/////////////////////////////////////////////////////////////////////////////////////
+.list{
+    & li{
+        line-height: 3em;
+    }
+}
+.list--unstyled{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 /////////////////////////////////////////////////////////////////////////////////////
 ///*GRID*/
@@ -125,14 +81,69 @@ ul li{
     @include row();
 }
 /////////////////////////////////////////////////////////////////////////////////////
-///*NAV*/
+///*TOP*/
+/////////////////////////////////////////////////////////////////////////////////////
+.top{
+    background: url("../../images/bgMenu.png") repeat-x bottom left;
+    padding: 1.5em 0 2em 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+///*CONTENT*/
+/////////////////////////////////////////////////////////////////////////////////////
+.content{
+    height: 100%;
+    position: relative;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+///*FOOTER*/
+/////////////////////////////////////////////////////////////////////////////////////
+.footer{
+    @include row();
+    background-color: $color-magenta;
+    height: 4em;    
+    padding-top: 1em;
+    text-align: center;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+///*PAGES*/
+/////////////////////////////////////////////////////////////////////////////////////
+.page{
+    min-height: 100%;
+    padding-top:3em;
+    position: inherit;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+///*CITATION*/
+/////////////////////////////////////////////////////////////////////////////////////
+.citation{
+    @include typograph-gnuolane(5em);
+    @include row-center(10);
+    margin-top: 1.5em!important;
+    padding: 1em;
+    text-align: center;
+    
+    & > small{
+        display: block;
+        margin-top: 2.5em;
+        font-size: 0.2em;
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////
+///*MENU*/
 /////////////////////////////////////////////////////////////////////////////////////
 .menu{
     & > ul{
         @include row-center(4);
+        
         & > li{
             display: inline-block;
+            
             & > a{
+                @include typograph-gnuolane(1.5em);
                 background-color: transparent;
                 border-radius: .25em;
                 color:$color-dark;
@@ -140,7 +151,6 @@ ul li{
                 text-decoration: none;
                 -webkit-transition:background 1s, color 1s;
                    -moz-transition:background 1s, color 1s;
-                @include typograph-gnuolane(1.5em);
 
                 &:hover{
                     background-color: $color-magenta;
@@ -148,6 +158,19 @@ ul li{
                 }
             }
         }
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////
+///*AUTHOR*/
+/////////////////////////////////////////////////////////////////////////////////////
+.author{
+    &-photo{
+        @include column(4);
+    }
+    &-description{
+        @include column(6);
+        @include offset(2);
+        line-height: 1.5em;
     }
 }
 /////////////////////////////////////////////////////////////////////////////////////
@@ -160,159 +183,8 @@ ul li{
 	text-decoration: none;
     
     &--ghost{
+        @include typograph-gnuolane(1.5em);
         border: solid 2px $color-light;
         color: $color-light;
-        @include typograph-gnuolane(1.5em);
-    }
-}
-/////////////////////////////////////////////////////////////////////////////////////
-///*LISTS*/
-/////////////////////////////////////////////////////////////////////////////////////
-.list{ 
-    & li{
-        line-height: 3em;
-    }
-    &.list--noBullet{
-        list-style: none;
-    }
-    &.list--noPadding{
-        padding: 0;
-    }
-}
-/////////////////////////////////////////////////////////////////////////////////////
-///*SERVICES*/
-/////////////////////////////////////////////////////////////////////////////////////
-.services{
-    @include column(4);
-}
-/////////////////////////////////////////////////////////////////////////////////////
-///*SKILLS*/
-/////////////////////////////////////////////////////////////////////////////////////
-.skills{
-    @include column(8);
-}
-/////////////////////////////////////////////////////////////////////////////////////
-///*WORKS*/
-/////////////////////////////////////////////////////////////////////////////////////
-.workDetail{
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    padding: 6em 1em 1em 1em;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-    
-    & .workDetail-hideButton{
-        color: white;
-        float: right;
-        text-decoration: none;
-    }
-    
-    & .workDetail-image{
-        @include column(6);
-        & > img{
-            width: 100%;
-        }
-    }
-    
-    & .workDetail-description{
-        @include column(4);
-        @include offset(2);
-        & p{
-            line-height: 1.6em;
-        }
-    }
-}
-.worksList{
-    @include row();
-    &.worksList--centered{
-          @include row-center(8);
-        
-        li{
-            @include column(2.9);
-        }
-    }
-    & .worksList-item{
-        padding-bottom: 3em;
-        @include column(2);
-
-        & a{
-            border-radius: 9999em;
-            box-shadow: 0px 0px 16px 5px rgba(69, 66, 66, 1);
-            display: block;
-            height: 170px;
-            overflow: hidden;
-            position: relative;
-            width: 170px;
-            
-            &:before{
-                background-color: transparent;
-                border-radius: 999em;
-                box-shadow: 0px 0px 16px 5px #1c1c1c inset;
-                content: " ";
-                height: 100%;
-                left:0;
-                position: absolute;
-                top:0;
-                width:100%;
-                z-index: 1;
-                -webkit-transition:background 1s, color 1s;
-                     -moz-transition:background 1s, color 1s;		
-            }
-            &:hover:before{
-                background-color: rgba(0,0,0,0.7);
-                left: 0;
-            }
-            
-            &:after{
-                background: transparent  url("../../images/zoom.png") no-repeat center center;
-                border-radius: 1000em;
-                content: "";
-                left: 8em;
-                position: absolute;
-                height: 100%;
-                top:0;
-                width: 100%;
-                z-index: 30;
-                -webkit-transition:left 1s;
-                     -moz-transition:left 1s;	
-            }
-
-            &:hover:after{
-                left: 0;
-            }   
-        }
-        &.worksList-item--noMarginLeft{
-            margin-left: 0;
-        }
-    } 
-}
-/////////////////////////////////////////////////////////////////////////////////////
-///*CONTACTS*/
-/////////////////////////////////////////////////////////////////////////////////////
-.listContacts{
-    & a{
-        color: white;
-        text-decoration: none;
-    }
-    @include row-center(6);
-    
-    & .listContacts-socialNetworking{
-        @include column(4);
-        li{
-            @include column(6);
-        }
-    }
-    & .listContacts-contacts{
-        @include column(5);
-        @include offset(3);
-        li{
-            position: relative;
-        }
-        span{
-            left: -1.15em;
-            position: absolute;
-            top: 0.19em;
-        }
     }
 }

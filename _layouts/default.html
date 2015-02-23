@@ -17,9 +17,9 @@
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
   <body>
-    <header>
+    <header class="top">
         <nav class="menu">
-           <ul class="list list--noBullet list--noPadding">
+           <ul class="list list--unstyled">
                <li><a>home</a></li>
                <li><a>about</a></li>
                <li><a>works</a></li>
@@ -27,13 +27,19 @@
            </ul>
         </nav>
     </header>
-    <div>
-        <section class="animated fadeInUp">{% include introduction.html %}</section>
-        <section class="animated">{% include aboutme.html %}</section>
-        <section class="animated">
+    <div class="content">
+        <section class="animated fadeInUp page">
+            {% include introduction.html %}
+        </section>
+        <section class="animated page">
+            {% include aboutme.html %}
+        </section>
+        <section class="animated page">
             {% include works.html %}
         </section>
-        <section class="animated">{% include contact.html %}</section>
+        <section class="animated page">
+            {% include contact.html %}
+        </section>
     </div>
     <script data-main="js/scripts" src="js/vendor/require.js"></script>
   </body>
