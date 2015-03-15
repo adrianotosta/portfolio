@@ -8,13 +8,21 @@ define(["worksList"], function(worksList){
             return arr;
         }
         this.showWorksList = function(listOfWorks){
-            var list = document.getElementsByClassName("worksList")[0];
-            
+            var list = document.getElementsByClassName("workList")[0];
+
             for (var i = 0; i < listOfWorks.length; i++){
-                li = document.createElement("li");
-                li.innerHTML = "<a id="+listOfWorks[i].id+"><img src='images/works/"+ listOfWorks[i].thumbnail +"'/></a>";
+                var li = document.createElement("li"),
+                    a  = document.createElement("a");
+                
+                a.setAttribute("id", listOfWorks[i].id);
+                a.classList.add("work");
+                a.innerHTML = "<img src='../images/works/"+ listOfWorks[i].thumbnail +"'/>";
+                
+                li.appendChild(a);
+                
                 list.appendChild(li);
             }
+
         }
         this.searchWork = function(id){
             for (var i = 0; i < worksList.length; i++){
