@@ -34,17 +34,16 @@
 ///////////////////////////////////////////////////////////////////////////////////   
     require(["works"], function(Works){
         var works = new Works(),
-            li    = document.getElementsByClassName("worksList-item");
+            link  = document.getElementsByClassName("work");
         
         works.showWorksList(works.loadWorksList(0,8));
-        
-        for(var i = 0; i < li.length; i++){
-            (function(index){
-                li[index].addEventListener("click", function(){
-                    works.showWork(this.getElementsByTagName("a")[0].getAttribute("id"));
-                });
+        for(var i = 0; i < link.length; i++){
+            (function(key){
+                link[key].onclick = function(){
+                    works.showWork(this.getAttribute("id"));
+                }
             }(i));
-        }        
+        }
     });
 ///////////////////////////////////////////////////////////////////////////////////
 /*GRAPH*/

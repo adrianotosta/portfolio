@@ -33,30 +33,32 @@ define(["worksList"], function(worksList){
             }
         }
         this.showWork = function(index){
-            var obj          = this.searchWork(index),
-                sibling      = document.getElementsByClassName("worksList")[0],
-                template     = document.createElement("div"),
+            var obj      = this.searchWork(index),
+//                sibling  = document.getElementsByClassName("workList")[0],
+                sibling = document.body,
+                template = document.createElement("div"),
                 text;
-            
-            text =  "<header><a class='workDetail-hideButton fa fa-times fa-2x'></a></header>";
-            text +=     "<div class='row'>";
-            text +=         "<div class='workDetail-image'>";
-            text +=             "<img alt='' src='images/works/"+ obj.picture +"' />";
-            text +=         "</div>";
-            text +=         "<div class='workDetail-description'>";
-            text +=             "<h2>"+ obj.title +"</h2>";
-            text +=             "<p>"+ obj.description +"</p>";
-            text +=             "<p><strong>client: </strong>"+ obj.client +"</p>";
-            text +=             "<p><strong>role: </strong>"+ obj.duty +"</p>";
-            text +=         "</div>";
-            text +=     "</div>";
+
+            text =  "<header><a class=' fa fa-times fa-2x'></a></header>";
+            text += "<div class=''>";
+            text +=   "<div class=''>";
+            text +=       "<img alt='' src='images/works/"+ obj.picture +"' />";
+            text +=   "</div>";
+            text +=   "<div class=''>";
+            text +=       "<h2>"+ obj.title +"</h2>";
+            text +=       "<p>"+ obj.description +"</p>";
+            text +=       "<p><strong>client: </strong>"+ obj.client +"</p>";
+            text +=       "<p><strong>role: </strong>"+ obj.duty +"</p>";
+            text +=   "</div>";
+            text += "</div>";
             
             template.innerHTML = text;
             
-            template.classList.add("workDetail", "animated", "bounceIn");
-            sibling.parentNode.insertBefore(template, sibling);
-            
-            this.hideWork();
+            template.classList.add("workDetails", "animated", "bounceIn");
+//            sibling.parentNode.insertBefore(template, sibling);
+            sibling.appendChild(template);
+        
+//            this.hideWork();
             
         }
         this.hideWork = function(){
