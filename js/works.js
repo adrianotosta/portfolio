@@ -38,19 +38,20 @@ define(["worksList"], function(worksList){
                 sibling = document.body,
                 template = document.createElement("div"),
                 text;
-
-            text =  "<header><a class=' fa fa-times fa-2x'></a></header>";
-            text += "<div class=''>";
-            text +=   "<div class=''>";
+            text =  "<div class='workDetails-content'>"
+            text +=  "<header class='row'><a class='workDetails-hideButton fa fa-times fa-2x'></a></header>";
+            text +=  "<div class='row'>";
+            text +=   "<div class='workDetails-image'>";
             text +=       "<img alt='' src='images/works/"+ obj.picture +"' />";
             text +=   "</div>";
-            text +=   "<div class=''>";
+            text +=   "<div class='workDetails-description'>";
             text +=       "<h2>"+ obj.title +"</h2>";
             text +=       "<p>"+ obj.description +"</p>";
             text +=       "<p><strong>client: </strong>"+ obj.client +"</p>";
             text +=       "<p><strong>role: </strong>"+ obj.duty +"</p>";
             text +=   "</div>";
-            text += "</div>";
+            text +=  "</div>";
+            text += "</div>"
             
             template.innerHTML = text;
             
@@ -58,12 +59,12 @@ define(["worksList"], function(worksList){
 //            sibling.parentNode.insertBefore(template, sibling);
             sibling.appendChild(template);
         
-//            this.hideWork();
+            this.hideWork();
             
         }
         this.hideWork = function(){
-            var work   = document.getElementsByClassName("workDetail")[0],
-                hiddenButton = document.getElementsByClassName("workDetail-hideButton")[0];
+            var work   = document.getElementsByClassName("workDetails")[0],
+                hiddenButton = document.getElementsByClassName("workDetails-hideButton")[0];
             
             hiddenButton.addEventListener("click", function(){
                 work.classList.add("bounceOut");

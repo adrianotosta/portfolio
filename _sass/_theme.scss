@@ -267,4 +267,24 @@ ul li{
     top: 0;
     width: 100%;
     z-index: 100000;
+    
+    & .workDetails-content{
+        @include row-center(8);
+        margin-top: 2.5em;
+    }
+    
+    & .workDetails-image{
+        @include column(6);
+        
+        & img{
+            max-width: 100%;
+        }
+    }
+    & .workDetails-description{
+        @include column(6);
+    }
+    
+    & .workDetails-hideButton{
+        float: right;
+    }
 }
