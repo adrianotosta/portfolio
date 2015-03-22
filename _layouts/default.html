@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,11 +27,14 @@
            </ul>
         </nav>
     </header>
+    <h1 class="screenReader">My portfolio</h1>
+    <a name="mainContent" class="screenReader"></a>
     <div class="content">
         <section class="animated fadeInUp page">
             {% include introduction.html %}
         </section>
         <section class="animated page author">
+            <a href="#mainContent" class="screenReader">main content</a>
             {% include aboutme.html %}
         </section>
         <section class="animated page">

@@ -16,7 +16,7 @@ define(["worksList"], function(worksList){
                 
                 a.setAttribute("id", listOfWorks[i].id);
                 a.classList.add("work");
-                a.innerHTML = "<img src='../images/works/"+ listOfWorks[i].thumbnail +"'/>";
+                a.innerHTML = "<img alt='"+ listOfWorks[i].thumbAlt +"' src='../images/works/"+ listOfWorks[i].thumbnail +"'/>";
                 
                 li.appendChild(a);
                 
@@ -42,10 +42,10 @@ define(["worksList"], function(worksList){
             text +=  "<header class='row'><a class='workDetails-hideButton fa fa-times fa-2x'></a></header>";
             text +=  "<div class='row'>";
             text +=   "<div class='workDetails-image'>";
-            text +=       "<img alt='' src='images/works/"+ obj.picture +"' />";
+            text +=       "<img alt='"+ obj.picAlt +"' src='images/works/"+ obj.picture +"' />";
             text +=   "</div>";
             text +=   "<div class='workDetails-description'>";
-            text +=       "<h2>"+ obj.title +"</h2>";
+            text +=       "<h3>"+ obj.title +"</h3>";
             text +=       "<p>"+ obj.description +"</p>";
             text +=       "<p><strong>client: </strong>"+ obj.client +"</p>";
             text +=       "<p><strong>role: </strong>"+ obj.duty +"</p>";
