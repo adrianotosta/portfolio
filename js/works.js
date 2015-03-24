@@ -34,8 +34,7 @@ define(["worksList"], function(worksList){
         }
         this.showWork = function(index){
             var obj      = this.searchWork(index),
-//                sibling  = document.getElementsByClassName("workList")[0],
-                sibling = document.body,
+                sibling  = document.body,
                 template = document.createElement("div"),
                 text;
             text =  "<div class='workDetails-content'>"
@@ -56,21 +55,20 @@ define(["worksList"], function(worksList){
             template.innerHTML = text;
             
             template.classList.add("workDetails", "animated", "bounceIn");
-//            sibling.parentNode.insertBefore(template, sibling);
             sibling.appendChild(template);
+            document.body.style.overflow = "hidden"; 
         
             this.hideWork();
-            
         }
         this.hideWork = function(){
-            var work   = document.getElementsByClassName("workDetails")[0],
+            var work         = document.getElementsByClassName("workDetails")[0],
                 hiddenButton = document.getElementsByClassName("workDetails-hideButton")[0];
             
             hiddenButton.addEventListener("click", function(){
                 work.classList.add("bounceOut");
                 setTimeout(function(){work.parentNode.removeChild(work);}, 500);
+                document.body.style.overflow = "auto";
             });
-//            
         }
     }
 });
