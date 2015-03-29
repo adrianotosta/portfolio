@@ -23,7 +23,8 @@
         
         for(var i = 0; i < navButton.length; i++){
             (function(index){
-                navButton[index].onclick = function(){
+                navButton[index].onclick = function(event){
+                    event.preventDefault();
                     menu.scroll(index);
                 };
             }(i));
