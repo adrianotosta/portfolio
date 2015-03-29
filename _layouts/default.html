@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <html class="no-js" lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,38 +9,37 @@
 		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 		<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-		<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+<!--		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">-->
+<!--		<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />-->
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
-  <body>
-    <header class="top">
-        <nav class="menu">
-           <ul class="list list--unstyled">
-               <li><a>home</a></li>
-               <li><a>about</a></li>
-               <li><a>works</a></li>
-               <li><a>contacts</a></li>
-           </ul>
-        </nav>
-    </header>
-    <h1 class="screenReader">My portfolio</h1>
-    <a name="mainContent" class="screenReader"></a>
-    <div class="content">
-        <section class="animated fadeInUp page">
-            {% include introduction.html %}
-        </section>
-        <section class="animated page author">
-            <a href="#mainContent" class="screenReader">main content</a>
-            {% include aboutme.html %}
-        </section>
-        <section class="animated page">
-            {% include works.html %}
-        </section>
-        <section class="animated page">
-            {% include contact.html %}
-        </section>
-    </div>
-    <script data-main="js/scripts" src="js/vendor/require.js"></script>
-  </body>
+    <body>
+       <h1 class="screenReader">My Portfolio - Adriano Tosta</h1>
+        <header class="top">
+            <nav class="menu">
+               <ul class="list list--unstyled">
+                   <li><a href="#home" name="">home</a></li>
+                   <li><a href="#aboutme" name="">about</a></li>
+                   <li><a href="#works" name="">works</a></li>
+                   <li><a href="#contact" name="">contacts</a></li>
+               </ul>
+            </nav>
+        </header>
+<!--           <h1 class="screenReader">My Portfolio</h1>-->
+        <div class="content">
+            <section id="home" class="animated fadeInUp page">
+                {% include introduction.html %}
+            </section>
+            <section id="aboutme" class="animated page author">
+                {% include aboutme.html %}
+            </section>
+            <section id="works" class="animated page">
+                {% include works.html %}
+            </section>
+            <section id="contact" class="animated page">
+                {% include contact.html %}
+            </section>
+        </div>
+        <script data-main="js/scripts" src="js/vendor/require.js"></script>
+    </body>
 </html>
