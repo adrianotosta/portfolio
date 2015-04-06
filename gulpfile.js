@@ -15,5 +15,7 @@ gulp.task('minificaJS', function(){
 });
 
 gulp.task('default', function(){
-    console.log("aaaaa");
+//    console.log("aaaaa");
+    var teste = gulp.src("_site/css/main.css");
+    console.log(typeof teste);
 });

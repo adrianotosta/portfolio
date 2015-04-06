@@ -1,3 +1,7 @@
+//iniciante:     10-20-30
+//intermediario: 40-50-60
+//avançado:      70-80-90
+
 define([], function(){
     return [
         {
@@ -44,5 +48,10 @@ define([], function(){
             "name": "illustrator",
             "rank": 60
         }
+//        ,
+//        {
+//            "name": "gulp",
+//            "rank": 40
+//        }
     ];
 });
