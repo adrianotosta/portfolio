@@ -15,6 +15,7 @@ define(["worksList"], function(worksList){
                     a  = document.createElement("a");
                 
                 a.setAttribute("id", listOfWorks[i].id);
+                a.setAttribute("href", "#details");
                 a.classList.add("work");
                 a.innerHTML = "<img alt='"+ listOfWorks[i].thumbAlt +"' src='../images/works/"+ listOfWorks[i].thumbnail +"'/>";
                 
@@ -37,7 +38,7 @@ define(["worksList"], function(worksList){
                 sibling  = document.body,
                 template = document.createElement("div"),
                 text;
-            text =  "<div class='workDetails-content'>"
+            text =  "<div id='details' class='workDetails-content'>"
             text +=  "<header class='row'><a class='workDetails-hideButton fa fa-times fa-2x'></a></header>";
             text +=  "<div class='row'>";
             text +=   "<div class='workDetails-image'>";
