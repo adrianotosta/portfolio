@@ -1,6 +1,6 @@
 define(["jquery"], function($){
     return function Menu(){
-        var body    = $("body"),
+        var body    = $("body, html"),
             section = body.children("div").find("section");
         
         this.scroll = function(index){

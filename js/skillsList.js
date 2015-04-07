@@ -48,10 +48,5 @@ define([], function(){
             "name": "illustrator",
             "rank": 60
         }
-//        ,
-//        {
-//            "name": "gulp",
-//            "rank": 40
-//        }
     ];
 });
