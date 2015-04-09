@@ -4,7 +4,7 @@ define([],function(){
             "id": 9,
             "title": "html5 game",
             "description": "This was game for a company that I user html5 canvas",
-            "client": "",
+            "client": "RV Mais Promoções e Eventos",
             "duty": "html5(canvas), css3, angularjs, php",
             "thumbnail": "mini_work_9.jpg",
             "thumbAlt": "",
