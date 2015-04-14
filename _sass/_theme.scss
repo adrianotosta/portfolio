@@ -23,7 +23,8 @@
 $color-dark: rgb(28,28,28);
 $color-light: rgb(255,255,255);
 $color-magenta: rgb(244,8,53);
-$color-green: #7ab800;
+$color-green: rgb(44,201,144);//#7ab800;
+$color-watt-saver: rgba(60,55,65, 0.75);
 /////////////////////////////////////////////////////////////////////////////////////
 /*MIXINS*/
 /////////////////////////////////////////////////////////////////////////////////////
@@ -261,7 +262,7 @@ ul li{
     }
 }
 .workDetails{
-    background-color: rgba(0,0,0, 0.75);
+    background-color: $color-watt-saver;
     display: block;
     height: 100%;
     left: 0;
@@ -273,6 +274,7 @@ ul li{
     & .workDetails-content{
         @include row-center(8);
         background-color: #fff;
+        box-shadow: 2px 8px 26px $color-dark;
         border-radius: 0.5em;
         color: $color-dark;
         margin-top: 2.5em;

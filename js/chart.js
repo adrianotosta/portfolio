@@ -26,12 +26,12 @@ define(["skillsList"], function(skills){
         }
         
         this.createOutLine = function(e){
-            canvas.strokeStyle = "#b6dd11";
+            canvas.strokeStyle = "#2CC990";
             canvas.strokeRect(this.positionX(e), 150, 50, -144);
         }
 
         this.createLevel = function(i){
-            canvas.fillStyle = "#b6dd11";
+            canvas.fillStyle = "#2CC990";
             canvas.fillRect(this.positionX(i), 150, 50, this.percentage(skills[i].rank));
         }
     };

@@ -35,7 +35,7 @@ define(["worksList"], function(worksList){
         }
         this.showWork = function(index){
             var obj      = this.searchWork(index),
-                sibling  = document.body,
+                sibling  = document.getElementsByClassName('workList')[0].parentNode,
                 template = document.createElement("div"),
                 text;
             text =  "<div id='details' class='workDetails-content'>"
