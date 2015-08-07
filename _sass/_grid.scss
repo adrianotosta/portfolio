@@ -61,7 +61,7 @@ $columns-width: ($total-width/$total-columns);
 @mixin column($column, $container: $total-columns ){
     display: inline;
     float: left;
-    margin: 0 gutter($column);
+    margin: 0 gutter($column, $container);
     width: width($column, $container);
 }
 ///////////////////////////////////////////////////////////////////////////////////

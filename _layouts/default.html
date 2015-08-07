@@ -11,35 +11,40 @@
 		<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 <!--		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">-->
 <!--		<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />-->
+    <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js">
+    </script>
+    <script>
+      window.onload = function() {
+          baseliner = new Baseliner(24);
+      }
+    </script>
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
     <body>
-       <h1 class="screenReader">My Portfolio - Adriano Tosta</h1>
-        <header class="top">
-            <nav class="menu">
-               <ul class="list list--unstyled">
-                   <li><a href="#home" name="">home</a></li>
-                   <li><a href="#aboutme" name="">about</a></li>
-                   <li><a href="#works" name="">works</a></li>
-                   <li><a href="#contact" name="">contacts</a></li>
-               </ul>
-            </nav>
-        </header>
-<!--           <h1 class="screenReader">My Portfolio</h1>-->
-        <div class="content">
-            <section id="home" class="animated fadeInUp page">
-                {% include introduction.html %}
-            </section>
-            <section id="aboutme" class="animated page author">
-                {% include aboutme.html %}
-            </section>
-            <section id="works" class="animated page">
-                {% include works.html %}
-            </section>
-            <section id="contact" class="animated page">
-                {% include contact.html %}
-            </section>
-        </div>
-        <script data-main="js/scripts" src="js/vendor/require.js"></script>
+      <header class="top">
+        <nav class="menu">
+           <ul class="">
+               <li><a href="#home" name="">home</a></li>
+               <li><a href="#aboutme" name="">about</a></li>
+               <li><a href="#works" name="">works</a></li>
+               <li><a href="#contact" name="">contacts</a></li>
+           </ul>
+        </nav>
+      </header>
+      <div class="content">
+          <section id="home" class="pageHome citation">
+            {% include introduction.html %}
+          </section>
+          <section id="aboutme" class="pageAboutMe">
+            {% include aboutme.html %}
+          </section>
+          <section id="works" class="pageWorks">
+            {% include works.html %}
+          </section>
+          <section id="contact" class="pageContact">
+            {% include contact.html %}
+          </section>
+      </div>
+      <script data-main="js/scripts" src="js/vendor/require.js"></script>
     </body>
 </html>

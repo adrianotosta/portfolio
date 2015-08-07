@@ -1,23 +1,4 @@
 /////////////////////////////////////////////////////////////////////////////////////
-/*RULES*/
-/////////////////////////////////////////////////////////////////////////////////////
-//For using BEM you have to follow this rules:
-//
-//block name:       ".nav"
-//modifier block:   ".nav--center"
-//
-//element name:     ".nav-menu"
-//modifier element: ".nav-menu--center"
-//
-//block name:       ".navTop"
-//modifier block:   ".navTop--fixed"
-//
-//element name:     ".navTop-menuButton"
-//modifier element: ".navTop-menuButton--center"
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////
 /*VARIABLES*/
 /////////////////////////////////////////////////////////////////////////////////////
 $color-dark: rgb(28,28,28);
@@ -25,15 +6,23 @@ $color-light: rgb(255,255,255);
 $color-magenta: rgb(244,8,53);
 $color-green: rgb(44,201,144);//#7ab800;
 $color-watt-saver: rgba(60,55,65, 0.75);
+$line-height: 1.5;
 /////////////////////////////////////////////////////////////////////////////////////
 /*MIXINS*/
 /////////////////////////////////////////////////////////////////////////////////////
-@mixin typograph-gnuolane($font-size:1em){
+@mixin typograph-title(){
 	font-family: gnuolane;
-	font-size: $font-size;
 	font-weight: lighter;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
+}
+@mixin button($color: $color-light){
+    @include typograph-title();
+    border-radius: 0.25em;
+    cursor: pointer;
+    display: inline-block;
+    color: $color;
+    text-decoration: none;
 }
 /////////////////////////////////////////////////////////////////////////////////////
 /*TAGS*/
@@ -42,285 +31,216 @@ $color-watt-saver: rgba(60,55,65, 0.75);
 	font-family: gnuolane;
 	src: url("../files/gnuolane.otf");
 }
-html, body{
-	height: 100%;
-}
-body{
-	background-image: url("../images/bg.jpg");
-	background-attachment: fixed;	
-	color: $color-light;
-}
-a{
-    cursor: pointer;
-}
-h2{
-	@include typograph-gnuolane(4em);
-}
-h3{
-	@include typograph-gnuolane(2em);
-}
-ul li{
-	line-height: 1.5em;
-}
-/////////////////////////////////////////////////////////////////////////////////////
-/*LIST*/
-/////////////////////////////////////////////////////////////////////////////////////
-.list{
-    & li{
-        line-height: 3em;
-    }
-}
-.list--unstyled{
-    list-style: none;
+*{
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    background-image: url("../images/bg.jpg");
+    background-attachment: fixed;   
+    color: $color-light;
+    font-size: 1em;
+    line-height: $line-height + em;
+}
+img{
+    vertical-align: bottom;
+}
+p{
+    font-size: 1em;
+    line-height: ($line-height/1) + em;
+    margin-bottom: ($line-height/1) + em;
 }
 /////////////////////////////////////////////////////////////////////////////////////
-/*GRID*/
+/*BASE*/
 /////////////////////////////////////////////////////////////////////////////////////
-.row{
+.content{
+    display: block;
+    margin: 0 auto;
+    max-width: 960px;
+    position: relative;
+    width: 98%;
+}
+%page{
     @include row();
+    padding-top: ($line-height * 4) + em;
+    min-height: $line-height * 25em;
+    /*padding-top:3.5em;
+    position: inherit;*/
 }
-/////////////////////////////////////////////////////////////////////////////////////
-/*TOP*/
-/////////////////////////////////////////////////////////////////////////////////////
+.pageHome{
+    @extend %page;
+}
+.pageAboutMe{
+    @extend %page;
+    height: 75em;
+}
+.pageWorks{
+    @extend %page;
+}
+.pageContact{
+    @extend %page;
+}
 .top{
     background: url("../../images/bgMenu.png") repeat-x bottom left;
-    padding: 1.5em 0 2em 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100000;
-}
-/////////////////////////////////////////////////////////////////////////////////////
-/*CONTENT*/
-/////////////////////////////////////////////////////////////////////////////////////
-.content{
-    height: 100%;
-    position: relative;
-}
-/////////////////////////////////////////////////////////////////////////////////////
-/*FOOTER*/
-/////////////////////////////////////////////////////////////////////////////////////
-.footer{
-    @include row();
-    background-color: $color-magenta;
-    bottom: 0;
-    height: 4em;    
-    padding-top: 1em;
-    position: absolute;
-    text-align: center;
-}
-/////////////////////////////////////////////////////////////////////////////////////
-/*PAGES*/
-/////////////////////////////////////////////////////////////////////////////////////
-.page{
-    min-height: 100%;
-    padding-top:3.5em;
-    position: inherit;
+    //altura 24 * 3
 }
 /////////////////////////////////////////////////////////////////////////////////////
 /*CITATION*/
 /////////////////////////////////////////////////////////////////////////////////////
 .citation{
-    @include typograph-gnuolane(5em);
-    @include row-center(10);
-    margin-top: 1.5em!important;
-    padding: 1em;
-    text-align: center;
-    
-    & > small{
-        display: block;
-        margin-top: 2.5em;
-        font-size: 0.2em;
-    }
+    @include typograph-title();
+    text-align: center;    
+}
+.citation-text{
+    font-size: 5em;
+    margin-top: $line-height * 1.5em; 
+    line-height: ($line-height/5) * 4 + em;
+}
+.citation-author{
+    display: block;
+    font-size: 2em;
+    line-height: ($line-height/2) * 2 + em;
 }
 /////////////////////////////////////////////////////////////////////////////////////
 /*MENU*/
 /////////////////////////////////////////////////////////////////////////////////////
 .menu{
-    & > ul{
-        @include row-center(4);
-        
-        & > li{
-            display: inline-block;
-            
-            & > a{
-                @include typograph-gnuolane(1.5em);
-                background-color: transparent;
-                border-radius: .25em;
-                color:$color-dark;
-                padding:.2em .5em;
-                text-decoration: none;
-                -webkit-transition:background 1s, color 1s;
-                   -moz-transition:background 1s, color 1s;
+    display: block;
+    margin: 0 auto;
+    max-width: 23em;
+}
+.menu > ul > li{
+    display: inline-block;
+}
+.menu a{
+    @include button($color-dark);
+    background-color: transparent;
+    font-size: 1.5em;
+    line-height: ($line-height/1.5) + em;
+    margin-bottom: ($line-height/1.5) + em;
+    margin-top: ($line-height/1.5) + em;
+    padding: (($line-height/1.5)/2) + em;
+    -webkit-transition:background 1s, color 1s;
+       -moz-transition:background 1s, color 1s;
 
-                &:hover{
-                    background-color: $color-magenta;
-                    color: $color-light;
-                }
-            }
-        }
+    &:hover{
+        background-color: $color-magenta;
+        color: $color-light;
     }
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*TITLE*/
+/////////////////////////////////////////////////////////////////////////////////////
+.titleSection{
+    @include typograph-title();
+    font-size: 3em;
+    line-height: ($line-height/3) * 2 + em;
+    margin-bottom: ($line-height/3) * 2 + em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*BUTTONS*/
+/////////////////////////////////////////////////////////////////////////////////////
+%button{
+    @include button();
+    border: solid 2px $color-light;
+    font-size: 1.5em;
+}
+.button--ghost{
+    @extend %button;
+    line-height: ($line-height/1.5) + em;
+    margin-bottom: ($line-height/1.5) + em;
+    padding: ((($line-height/1.5)/2) - 0.125) + em 1em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*SERVICES*/
+/////////////////////////////////////////////////////////////////////////////////////
+.services{
+    font-size: 1em;
+    line-height: 1.5em;
+}
+.services-list{
+    font-size: 1em;
+    line-height: 1.5em;
+    list-style-position: inside;
+    margin-bottom: 1.5em;
 }
 /////////////////////////////////////////////////////////////////////////////////////
 /*AUTHOR*/
 /////////////////////////////////////////////////////////////////////////////////////
 .author{
-    &-photo{
-        @include column(4);
-    }
-    &-description{
-        @include column(6);
-        @include offset(2);
-        line-height: 1.5em;
-    }
-    &-services{
-        @include column(4);
-    }
-    &-skills{
-        @include offset(1);
-        @include column(7);
+    @include row();
+}
+.author-image{
+    @include column(5);
+    height: 22.5em;
+}
+.author-description{
+    @include column(7);
+}
+.author-socialMedia{
+    li{
+        display: inline-block;
+        list-stye: none;
     }
 }
 /////////////////////////////////////////////////////////////////////////////////////
-/*BUTTONS*/
+/*WORKS LIST*/
 /////////////////////////////////////////////////////////////////////////////////////
-.btn{
-	border-radius: .25em;
-	display: inline-block;
-	padding: 0.2em 1em;
-	text-decoration: none;
-    
-    &--ghost{
-        @include typograph-gnuolane(1.5em);
-        border: solid 2px $color-light;
-        color: $color-light;
+.workList{
+    @include row();
+    list-style: none;
+    margin-bottom: 1.5em;
+
+    & > li{
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 1%;
+        width: 6.95em;
+    }
+}
+.workList--rounded{
+    li{
+        border-radius: 9999em;
+        overflow: hidden;
     }
 }
 /////////////////////////////////////////////////////////////////////////////////////
 /*WORKS*/
 /////////////////////////////////////////////////////////////////////////////////////
 .work{
-    border-radius: 999em;
-    box-shadow: 0px 0px 16px 5px rgba(69, 66, 66, 1);
-    display: inline-block;
-    height: 170px;
-    overflow: hidden;
-    position: relative;
-    width: 170px;
-    
-    &:before{
-        background-color: transparent;
-        border-radius: 999em;
-        box-shadow: 0px 0px 16px 5px #1c1c1c inset;
-        content: "";
-        height: 100%;
-        left:0;
-        position: absolute;
-        top:0;
-        width:100%;
-        z-index: 1;
-        -webkit-transition:background 1s, color 1s;
-           -moz-transition:background 1s, color 1s;		
-    }
-    &:hover:before{
-        background-color: rgba(0,0,0,0.7);
-        left: 0;
-    }
-    
-    &:after{
-        background: transparent  url("../../images/zoom.png") no-repeat center center;
-        border-radius: 999em;
-        content: "";
-        left: 8em;
-        position: absolute;
-        height: 100%;
-        top:0;
-        width: 100%;
-        z-index: 30;
-        -webkit-transition:left 1s;
-             -moz-transition:left 1s;	
-    }
-
-    &:hover:after{
-        left: 0;
-    }   
-    
-}
-.workList{
-    @include row();
-    &.worksList--centered{
-          @include row-center(8);
-        
-        li{
-            @include column(2.9);
-        }
-    }
-    & li:nth-child(5n){
-        margin-left: 0;
+    img{
+        width: 6.95em;
     }
 }
+/////////////////////////////////////////////////////////////////////////////////////
+/*DETAILS OF WORKS*/
+/////////////////////////////////////////////////////////////////////////////////////
 .workDetails{
-    background-color: $color-watt-saver;
-    display: block;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100000;
-    
-    & .workDetails-content{
-        @include row-center(8);
-        background-color: #fff;
-        box-shadow: 2px 8px 26px $color-dark;
-        border-radius: 0.5em;
-        color: $color-dark;
-        margin-top: 2.5em;
-        padding: 0.5em;
-    }
-    
-    & .workDetails-image{
-        @include column(6);
-        
-        & img{
-            max-width: 100%;
-        }
-    }
-    & .workDetails-description{
-        @include column(6);
-    }
-    
-    & .workDetails-hideButton{
-        float: right;
+    @include row();
+}
+.workDetails-image{
+    @include column(7);
+}
+.workDetails-description{
+    h3{
+        @include typograph-title();
+        font-size: 2em;
+        line-height: ($line-height/2) * 2 + em;
+        margin-bottom: ($line-height/2) + em;
     }
 }
-/////////////////////////////////////////////////////////////////////////////////////
-/*CONTACT*/
-/////////////////////////////////////////////////////////////////////////////////////
-.contact{
-    @include row-center(5);
-    
-    .list{
-        margin-top: 4em;
-        vertical-align: middle;
-        li{
-            line-height: 2em;
-            
-            &:before {
-                margin-right: 1em;
-            }
-        }
-    }
-}
-/////////////////////////////////////////////////////////////////////////////////////
-/*SOCIAL LINKS*/
-/////////////////////////////////////////////////////////////////////////////////////
-.social{
-    li{
-        display: inline-block;
-    }
+.workDetails-hideButton{
+    float: right;
 }
 /////////////////////////////////////////////////////////////////////////////////////
 /*ACCESSIBILITY*/

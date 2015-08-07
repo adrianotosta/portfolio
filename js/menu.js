@@ -6,7 +6,6 @@ define(["jquery"], function($){
         this.scroll = function(index){
             var position = section.eq(index).offset().top;
             body.animate({scrollTop: position},1000);
-        }
-        
+        }  
     };
 });
