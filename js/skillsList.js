@@ -5,32 +5,36 @@
 define([], function(){
     return [
         {
-            "name": "git/github",
-            "rank": 30
-        },
-        {
             "name": "html 5",
-            "rank": 50
+            "rank": 60
         },
         {
             "name": "css/css3",
             "rank": 60
         },
         {
-            "name": "sass",
-            "rank": 50
-        },
-        {
             "name": "javascript",
-            "rank": 60
+            "rank": 70
         },
         {
             "name": "jquery",
             "rank": 70
         },
         {
+            "name": "Gulp",
+            "rank": 30
+        },
+        {
             "name": "angularjs",
             "rank": 30
+        },
+        {
+            "name": "git/github",
+            "rank": 40
+        },
+        {
+            "name": "sass",
+            "rank": 60
         },
         {
             "name": "php",
@@ -39,6 +43,10 @@ define([], function(){
         {
             "name": ".Net",
             "rank": 30
+        },
+        {
+            "name": "axure-rp",
+            "rank": 40
         },
         {
             "name": "photoshop",

@@ -82,9 +82,11 @@ p{
 }
 .pageWorks{
     @extend %page;
+    height: 76.5em;
 }
 .pageContact{
     @extend %page;
+    height: 45em;
 }
 .top{
     background: url("../../images/bgMenu.png") repeat-x bottom left;
@@ -228,10 +230,14 @@ p{
 .workDetails{
     @include row();
 }
+.workDetails-content{
+    @extend .workDetails;
+}
 .workDetails-image{
     @include column(7);
 }
 .workDetails-description{
+    @include column(5);
     h3{
         @include typograph-title();
         font-size: 2em;
@@ -241,6 +247,29 @@ p{
 }
 .workDetails-hideButton{
     float: right;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*CONTACT*/
+/////////////////////////////////////////////////////////////////////////////////////
+.contact{
+}
+.contact-list{
+    list-style: none;
+}
+.contact-list li{
+   font-size: 1.5em;
+   line-height: ($line-height/1.5) + em;
+   margin-bottom: ($line-height/1.5) + em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*FOOTER*/
+/////////////////////////////////////////////////////////////////////////////////////
+.footer{
+    background-color: $color-magenta;
+    font-size: 1em;
+    line-height: $line-height + em;
+    padding: $line-height + em;
+    text-align: center;
 }
 /////////////////////////////////////////////////////////////////////////////////////
 /*ACCESSIBILITY*/

@@ -41,8 +41,8 @@ define(["worksList"], function(worksList){
 
             this.hideWork();            
 
-            text =  "<div class='workDetails-content'>"
-            text +=  "<header><a class='workDetails-hideButton fa fa-times fa-2x'></a></header>";
+            text =  "<div class='workDetails-content'>";
+            //text +=  "<header><a class='workDetails-hideButton fa fa-times fa-2x'></a></header>";
             text +=  "<img class='workDetails-image' alt='"+ obj.picAlt +"' src='images/works/"+ obj.picture +"' />";
             text +=  "<div class='workDetails-description'>";
             text +=       "<h3>"+ obj.title +"</h3>";
@@ -50,7 +50,7 @@ define(["worksList"], function(worksList){
             text +=       "<p><strong>client: </strong>"+ obj.client +"</p>";
             text +=       "<p><strong>role: </strong>"+ obj.duty +"</p>";
             text +=  "</div>";
-            text += "</div>"
+            text += "</div>";
             
             template.innerHTML = text;
             

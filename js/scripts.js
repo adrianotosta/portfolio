@@ -24,6 +24,7 @@
         for(var i = 0; i < navButton.length; i++){
             (function(index){
                 navButton[index].onclick = function(event){
+                    //ga('send', 'event', 'link', 'click', index);
                     menu.scroll(index);
                     return false;
                 };
@@ -41,6 +42,7 @@
         for(var i = 0; i < link.length; i++){
             (function(key){
                 link[key].onclick = function(){
+                    //ga('send', 'event', 'link', 'click', key);
                     works.showWork(this.getAttribute("id"));
                 }
             }(i));
