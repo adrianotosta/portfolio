@@ -30,11 +30,15 @@ define([], function(){
         },
         {
             "name": "git/github",
-            "rank": 40
+            "rank": 60
         },
         {
             "name": "sass",
             "rank": 60
+        },
+        {
+            "name": "nodejs",
+            "rank": 40
         },
         {
             "name": "php",
@@ -46,7 +50,7 @@ define([], function(){
         },
         {
             "name": "axure-rp",
-            "rank": 40
+            "rank": 60
         },
         {
             "name": "photoshop",
