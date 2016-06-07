@@ -17,7 +17,7 @@ define(["worksList"], function(worksList){
                 a.setAttribute("id", listOfWorks[i].id);
                 //a.setAttribute("href", "");
                 a.classList.add("work");
-                a.innerHTML = "<img alt='"+ listOfWorks[i].thumbAlt +"' src='../images/works/"+ listOfWorks[i].thumbnail +"'/>";
+                a.innerHTML = "<img alt='"+ listOfWorks[i].thumbAlt +"' src='images/works/"+ listOfWorks[i].thumbnail +"'/>";
                 
                 li.appendChild(a);
                 
