@@ -21,12 +21,12 @@ define([], function(){
             "rank": 70
         },
         {
-            "name": "Gulp",
+            "name": "gulp",
             "rank": 30
         },
         {
             "name": "angularjs",
-            "rank": 30
+            "rank": 70
         },
         {
             "name": "git/github",
@@ -41,11 +41,11 @@ define([], function(){
             "rank": 40
         },
         {
-            "name": "php",
+            "name": "protractor",
             "rank": 30
         },
         {
-            "name": ".Net",
+            "name": "mocha",
             "rank": 30
         },
         {
