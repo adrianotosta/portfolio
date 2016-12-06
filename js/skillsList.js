@@ -29,16 +29,16 @@ define([], function(){
             "rank": 70
         },
         {
+            "name": "ionic",
+            "rank": 60
+        },        
+        {
             "name": "git/github",
             "rank": 60
         },
         {
             "name": "sass",
             "rank": 60
-        },
-        {
-            "name": "nodejs",
-            "rank": 40
         },
         {
             "name": "protractor",
@@ -48,6 +48,10 @@ define([], function(){
             "name": "mocha",
             "rank": 30
         },
+        {
+            "name": "jasmine",
+            "rank": 30
+        },        
         {
             "name": "axure-rp",
             "rank": 60
