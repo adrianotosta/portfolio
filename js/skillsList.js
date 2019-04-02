@@ -17,45 +17,33 @@ define([], function(){
             "rank": 70
         },
         {
-            "name": "jquery",
-            "rank": 70
+            "name": "ES6",
+            "rank": 50
         },
         {
-            "name": "gulp",
-            "rank": 30
-        },
-        {
-            "name": "angularjs",
-            "rank": 70
-        },
-        {
-            "name": "ionic",
+            "name": "webpack",
             "rank": 60
         },        
         {
-            "name": "git/github",
+            "name": "gulp",
             "rank": 60
+        },
+        {
+            "name": "vuejs",
+            "rank": 70
+        },       
+        {
+            "name": "git/github",
+            "rank": 70
         },
         {
             "name": "sass",
             "rank": 60
         },
         {
-            "name": "protractor",
-            "rank": 30
-        },
-        {
-            "name": "mocha",
-            "rank": 30
-        },
-        {
-            "name": "jasmine",
-            "rank": 30
+            "name": "TDD",
+            "rank": 50
         },        
-        {
-            "name": "axure-rp",
-            "rank": 60
-        },
         {
             "name": "photoshop",
             "rank": 70
