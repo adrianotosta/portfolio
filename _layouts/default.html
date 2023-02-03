@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width initial-scale=1">
+
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+		<link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <!--<script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24779023-3']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>-->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-24779023-3', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+    <body>
+      <header class="top">
+        <nav class="menu">
+           <ul class="">
+               <li><a href="#home" name="">home</a></li>
+               <li><a href="#aboutme" name="">about</a></li>
+               <li><a href="#works" name="">works</a></li>
+               <li><a href="#contact" name="">contacts</a></li>
+           </ul>
+        </nav>
+      </header>
+      <div class="content">
+          <section id="home" class="pageHome citation">
+            {% include introduction.html %}
+          </section>
+          <section id="aboutme" class="pageAboutMe">
+            {% include aboutme.html %}
+          </section>
+          <section id="works" class="pageWorks">
+            {% include works.html %}
+          </section>
+          <section id="contact" class="pageContact">
+            {% include contact.html %}
+          </section>
+      </div>
+      <footer class="footer">@copywrite 2015</footer>
+      <script data-main="js/scripts" src="js/vendor/require.js"></script>
+    </body>
+</html>

@@ -1,0 +1,286 @@
+/////////////////////////////////////////////////////////////////////////////////////
+/*VARIABLES*/
+/////////////////////////////////////////////////////////////////////////////////////
+$color-dark: rgb(28,28,28);
+$color-light: rgb(255,255,255);
+$color-magenta: rgb(244,8,53);
+$color-green: rgb(44,201,144);//#7ab800;
+$color-watt-saver: rgba(60,55,65, 0.75);
+$line-height: 1.5;
+/////////////////////////////////////////////////////////////////////////////////////
+/*MIXINS*/
+/////////////////////////////////////////////////////////////////////////////////////
+@mixin typograph-title(){
+	font-family: gnuolane;
+	font-weight: lighter;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+@mixin button($color: $color-light){
+    @include typograph-title();
+    border-radius: 0.25em;
+    cursor: pointer;
+    display: inline-block;
+    color: $color;
+    text-decoration: none;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*TAGS*/
+/////////////////////////////////////////////////////////////////////////////////////
+@font-face{
+	font-family: gnuolane;
+	src: url("../files/gnuolane.otf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    background-image: url("../images/bg.jpg");
+    background-attachment: fixed;   
+    color: $color-light;
+    font-size: 1em;
+    line-height: $line-height + em;
+}
+img{
+    vertical-align: bottom;
+}
+p{
+    font-size: 1em;
+    line-height: ($line-height/1) + em;
+    margin-bottom: ($line-height/1) + em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*BASE*/
+/////////////////////////////////////////////////////////////////////////////////////
+.content{
+    display: block;
+    margin: 0 auto;
+    max-width: 960px;
+    position: relative;
+    width: 98%;
+}
+%page{
+    @include row();
+    padding-top: ($line-height * 4) + em;
+    min-height: $line-height * 25em;
+    /*padding-top:3.5em;
+    position: inherit;*/
+}
+.pageHome{
+    @extend %page;
+}
+.pageAboutMe{
+    @extend %page;
+    height: 75em;
+}
+.pageWorks{
+    @extend %page;
+    height: 76.5em;
+}
+.pageContact{
+    @extend %page;
+    height: 45em;
+}
+.top{
+    background: url("../images/bgMenu.png") repeat-x bottom left;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+    //altura 24 * 3
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*CITATION*/
+/////////////////////////////////////////////////////////////////////////////////////
+.citation{
+    @include typograph-title();
+    text-align: center;    
+}
+.citation-text{
+    font-size: 5em;
+    margin-top: $line-height * 1.5em; 
+    line-height: ($line-height/5) * 4 + em;
+}
+.citation-author{
+    display: block;
+    font-size: 2em;
+    line-height: ($line-height/2) * 2 + em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*MENU*/
+/////////////////////////////////////////////////////////////////////////////////////
+.menu{
+    display: block;
+    margin: 0 auto;
+    max-width: 23em;
+}
+.menu > ul > li{
+    display: inline-block;
+}
+.menu a{
+    @include button($color-dark);
+    background-color: transparent;
+    font-size: 1.5em;
+    line-height: ($line-height/1.5) + em;
+    margin-bottom: ($line-height/1.5) + em;
+    margin-top: ($line-height/1.5) + em;
+    padding: (($line-height/1.5)/2) + em;
+    -webkit-transition:background 1s, color 1s;
+       -moz-transition:background 1s, color 1s;
+
+    &:hover{
+        background-color: $color-magenta;
+        color: $color-light;
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*TITLE*/
+/////////////////////////////////////////////////////////////////////////////////////
+.titleSection{
+    @include typograph-title();
+    font-size: 3em;
+    line-height: ($line-height/3) * 2 + em;
+    margin-bottom: ($line-height/3) * 2 + em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*BUTTONS*/
+/////////////////////////////////////////////////////////////////////////////////////
+%button{
+    @include button();
+    border: solid 2px $color-light;
+    font-size: 1.5em;
+}
+.button--ghost{
+    @extend %button;
+    line-height: ($line-height/1.5) + em;
+    margin-bottom: ($line-height/1.5) + em;
+    padding: ((($line-height/1.5)/2) - 0.125) + em 1em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*SERVICES*/
+/////////////////////////////////////////////////////////////////////////////////////
+.services{
+    font-size: 1em;
+    line-height: 1.5em;
+}
+.services-list{
+    font-size: 1em;
+    line-height: 1.5em;
+    list-style-position: inside;
+    margin-bottom: 1.5em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*AUTHOR*/
+/////////////////////////////////////////////////////////////////////////////////////
+.author{
+    @include row();
+}
+.author-image{
+    @include column(5);
+    height: 22.5em;
+}
+.author-description{
+    @include column(7);
+}
+.author-socialMedia{
+    li{
+        display: inline-block;
+        list-stye: none;
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*WORKS LIST*/
+/////////////////////////////////////////////////////////////////////////////////////
+.workList{
+    @include row();
+    list-style: none;
+    margin-bottom: 1.5em;
+
+    & > li{
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 1%;
+        width: 6.95em;
+    }
+}
+.workList--rounded{
+    li{
+        border-radius: 9999em;
+        overflow: hidden;
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*WORKS*/
+/////////////////////////////////////////////////////////////////////////////////////
+.work{
+    img{
+        width: 6.95em;
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*DETAILS OF WORKS*/
+/////////////////////////////////////////////////////////////////////////////////////
+.workDetails{
+    @include row();
+}
+.workDetails-content{
+    @extend .workDetails;
+}
+.workDetails-image{
+    @include column(7);
+}
+.workDetails-description{
+    @include column(5);
+    h3{
+        @include typograph-title();
+        font-size: 2em;
+        line-height: ($line-height/2) * 2 + em;
+        margin-bottom: ($line-height/2) + em;
+    }
+}
+.workDetails-hideButton{
+    float: right;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*CONTACT*/
+/////////////////////////////////////////////////////////////////////////////////////
+.contact{
+}
+.contact-list{
+    list-style: none;
+}
+.contact-list li{
+   font-size: 1.5em;
+   line-height: ($line-height/1.5) + em;
+   margin-bottom: ($line-height/1.5) + em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*FOOTER*/
+/////////////////////////////////////////////////////////////////////////////////////
+.footer{
+    background-color: $color-magenta;
+    font-size: 1em;
+    line-height: $line-height + em;
+    padding: $line-height + em;
+    text-align: center;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+/*ACCESSIBILITY*/
+/////////////////////////////////////////////////////////////////////////////////////
+.screenReader{
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

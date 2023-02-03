@@ -1,0 +1,12 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import url("normalize.min.css");
+@import url("animate.css");
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+    "grid",
+    "icons/font-awesome",
+    "theme"
+;
